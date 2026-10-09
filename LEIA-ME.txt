@@ -1,0 +1,14 @@
+CONVITE HTML
+
+Abra index.html no navegador para testar.
+A foto deve permanecer na mesma pasta.
+
+Para personalizar, abra index.html e altere:
+Yasmim
+25 anos
+25 de Outubro de 2026
+19:00
+Salão de Festas
+Rua das Flores, 123
+
+Depois, publique os dois arquivos (index.html e foto_aniversario.png) em um serviço de hospedagem.

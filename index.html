@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Invitation 🎂</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;font-family:Georgia,"Times New Roman",serif;background:linear-gradient(135deg,#fff4f8,#ffe0ec);color:#543743;overflow-x:hidden}
+.page{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:25px 15px;position:relative}
+.content{width:min(720px,100%);background:rgba(255,255,255,.82);border:2px solid #ffd0e1;border-radius:30px;padding:28px;text-align:center;box-shadow:0 20px 60px rgba(155,49,91,.18);position:relative;z-index:2}
+.decor{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.decor span{position:absolute;font-size:22px;animation:float 4s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-25px) rotate(12deg)}}
+.title{font-size:clamp(2.2rem,8vw,3.3rem);color:#9b315b;margin-bottom:5px}
+.subtitle{color:#e85d91;font-size:1.2rem;font-style:italic;margin-bottom:20px}
+.photo{width:min(440px,100%);max-height:500px;object-fit:contain;border-radius:20px;border:6px solid white;box-shadow:0 10px 30px #0002}
+.name{color:#9b315b;font-size:2rem;margin-top:18px}.age{color:#d6a53a;font-weight:bold}
+button{margin-top:25px;border:0;border-radius:999px;padding:16px 30px;background:#e85d91;color:white;font-size:1.05rem;font-weight:bold;cursor:pointer;box-shadow:0 8px 20px #e85d9159;transition:.2s}
+button:hover{transform:translateY(-3px) scale(1.03);background:#9b315b}
+.info{display:none;animation:show .6s ease}.info.active{display:block}.intro.hidden{display:none}
+@keyframes show{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+.card{background:white;border:3px solid #ffd0e1;border-radius:24px;padding:20px;margin-top:25px}
+.item{padding:16px 10px;border-bottom:1px solid #f6d9e5}.item:last-child{border-bottom:0}
+.icon{font-size:2rem}.label{color:#9b315b;font-size:.85rem;font-weight:bold;letter-spacing:1px;margin:5px}.value{font-family:Arial,sans-serif;font-size:1.1rem}
+.message{margin-top:25px;font-size:1.1rem;line-height:1.6}.back{background:#9b315b}
+</style>
+</head>
+<body>
+<div class="decor">
+<span style="left:5%;top:10%">🎈</span><span style="left:15%;top:75%">✨</span>
+<span style="left:28%;top:15%">🎉</span><span style="left:42%;top:85%">💕</span>
+<span style="left:58%;top:8%">🎀</span><span style="left:72%;top:72%">🎁</span>
+<span style="left:88%;top:18%">🎈</span><span style="left:94%;top:80%">✨</span>
+</div>
+
+<main class="page"><section class="content">
+
+<div id="intro" class="intro">
+<h1 class="title">🎈 Birthday 🎈</h1>
+<p class="subtitle">Você está convidado!</p>
+<img src="foto_aniversario.png" alt="Foto do aniversário" class="photo">
+<h2 class="name">🎂 Yasmim</h2>
+<p class="age">25 anos</p>
+<button onclick="mostrarConvite()">✨ CLIQUE AQUI ✨</button>
+<p style="margin-top:20px;font-size:1.5rem">🎀 🎁 🎈 🎂 🎈 🎁 🎀</p>
+</div>
+
+<div id="info" class="info">
+<h1 class="title">🎉 Vamos comemorar! 🎉</h1>
+<h2 class="name">Yasmim</h2><p class="age">25 anos</p>
+<div class="card">
+<div class="item"><div class="icon">📅</div><div class="label">DATA</div><div class="value">25 de Outubro de 2026</div></div>
+<div class="item"><div class="icon">⏰</div><div class="label">HORÁRIO</div><div class="value">19:00</div></div>
+<div class="item"><div class="icon">📍</div><div class="label">LOCAL</div><div class="value">Salão de Festas</div></div>
+<div class="item"><div class="icon">🏠</div><div class="label">ENDEREÇO</div><div class="value">Rua das Flores, 123</div></div>
+</div>
+<p class="message">Sua presença vai deixar esse dia ainda mais especial! 💕</p>
+<p style="margin-top:20px;font-size:1.5rem">🎈 🎂 🎁 ✨ 🎉 ✨ 🎁 🎂 🎈</p>
+<button class="back" onclick="voltar()">← Voltar</button>
+</div>
+
+</section></main>
+<script>
+function mostrarConvite(){document.getElementById('intro').classList.add('hidden');document.getElementById('info').classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}
+function voltar(){document.getElementById('info').classList.remove('active');document.getElementById('intro').classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'})}
+</script>
+</body>
+</html>
